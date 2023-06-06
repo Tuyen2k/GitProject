@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<body>
+<button type="button" onclick="showmes()">Click Me!</button>
+<button type="button" onclick="alert('Goobye')">click</button>
+<script>
+    function showmes(){
+        alert('hello');
+    }
+</script>
+<br> <br>
+<div id="look"></div>
+<button type="button" onclick="showmess()">Kick!</button>
+<script>
+    function showmess(){
+        document.getElementById('look').innerHTML='Ahhh'
+    }
+</script>
+<br><br>
+<div></div>
+<button type="button" onclick="showmessa()">kick me now!</button>
+<script>
+    function showmessa(){
+        document.write('OK. Right');
+    }
+</script>
+<h1 id="title"></h1>
+<select id="myselect" onchange="do_1()">
+    <option value="KDB">KDB</option>
+    <option value="Neymar">Neymar</option>
+    <option value="M10">M10</option>
+    <option value="CR7">CR7</option>
+</select>
+<script>
+    function do_1(){
+        var selectedvalue = document.getElementById('myselect').value;
+        alert(selectedvalue);
+    }
+</script>
+<p id="test"> Kaido</p>
+<script>
+    var test = document.getElementById("test");
+    test.addEventListener("mouseover", mouseover);
+    test.addEventListener("mouseout",mouseout);
+    function mouseover(){
+        document.getElementById('test').style.color ="red";
+    }
+    function mouseout(){
+        document.getElementById('test').style.color ="black";
+    }
+
+</script>
+
+</body>
+</html>
+<script>
+    var title = 'Goodmorning'
+    document.getElementById('title').innerHTML = title
+</script>
+

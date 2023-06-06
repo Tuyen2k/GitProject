@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Market Research Survey</title>
+</head>
+<body>
+<form action="">
+    <h2> Market Research Survey</h2>
+    Please take a few moments to complete this satisfaction survey.
+    <hr>
+    <h4>What is your age range?</h4>
+    <select name="range">
+        <option value="18-24">18-24</option>
+        <option value="25-34">25-34</option>
+        <option value="35-50">35-50</option>
+        <option value="50+">50+</option>
+    </select>
+    <h4>What is your yearly income range?</h4>
+    <select name="income">
+        <option value="0-25">$0 - $25,000</option>
+        <option value="25-50">$25,001-$50,000</option>
+        <option value="50-100">$50,001-$100,000</option>
+        <option value="100+">$100,000+</option>
+    </select>
+    <h4>Gender Identity</h4>
+    <input type="radio" name="gender"> Male <br>
+    <input type="radio" name="gender"> Female <br>
+    <input type="radio" name="gender"> Nonbinary <br>
+    <input type="radio" name="gender"> Other <br>
+    <textarea maxlength="250" minlength="0"></textarea>
+    <h4>Which of the following products have your purchased in the last 2 months. Please check all that apply.</h4>
+    <input type="checkbox" name="product"> Product 1 <br>
+    <input type="checkbox" name="product"> Product 2 <br>
+    <input type="checkbox" name="product"> Product 3 <br>
+    <h4>How often would you use our new product?</h4>
+    <input type="radio" name="new product"> Daily <br>
+    <input type="radio" name="new product"> Weekly <br>
+    <input type="radio" name="new product"> Monthly <br>
+    <h4>What would you pay for the new product?</h4>
+    <table>
+        <tr>
+            <td>$</td>
+            <td><input type="number" name="dollars"></td>
+            <td>.</td>
+            <td><input type="number" name="cents"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Dollars</td>
+            <td></td>
+            <td>Cents</td>
+        </tr>
+    </table>
+    <h4>What features would you like to see in the new product.</h4>
+    <textarea rows="5" cols="200"></textarea>
+</form>
+</body>
+</html>
