@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi nhiệt độ</title>
+</head>
+<style>
+    th{
+        width: 200px;
+    }
+    td{
+        width: 200px;
+    }
+    select{
+        width: 50px;
+        align-items: center;
+    }
+</style>
+<body>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th align="left">From temperature</th>
+            <th align="left">To temperature</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td><input type="text" id="giatrivao"></td>
+            <td>
+                <select id="from" name="">
+                    <option value="C">C</option>
+                    <option value="F">F</option>
+                </select>
+            </td>
+            <td>
+                <select id="to" name="">
+                    <option value="C">C</option>
+                    <option value="F">F</option>
+                </select>
+            </td>
+            <td><button onclick="thaydoi()"/>Convert</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <div id="result"></div>
+<script>
+    function thaydoi() {
+        let dauvao = document.getElementById('giatrivao').value;
+        let doC = document.getElementById('from').value;
+        let doF = document.getElementById('to').value;
+            if ( doC=='C' && doF=='F'){(dauvao=(dauvao * 9) / 5 + 32)}
+            else if(doC=='F' && doF=='C'){(dauvao=(dauvao - 32) * 5 / 9)}
+            document.getElementById('result').innerText = 'Result: ' + dauvao
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+</head>
+<body>
+<h2>Caculator</h2>
+<input type="text" id="input1" >
+<input type="text" id="input2">
+<br>
+<br>
+<button onclick="Add()">Addition(+)</button>
+<button onclick="Sub()">Subtruction(-)</button>
+<button onclick="mul()">Multiplication(x)</button>
+<button onclick="dis()">Division(/)</button>
+<br>
+<br>
+<h3>Result: </h3>
+<div id="result"></div>
+</body>
+</html>
+<script>
+    function Add(){
+        let number1 = document.getElementById('input1').value
+        let number2 = document.getElementById('input2').value
+        let result = parseFloat(number1) + parseFloat(number2)
+        document.getElementById('result').innerHTML = result
+    }
+    function Sub(){
+        let number1 = document.getElementById('input1').value
+        let number2 = document.getElementById('input2').value
+        let result = parseFloat(number1) - parseFloat(number2)
+        document.getElementById('result').innerHTML = result
+    }
+    function mul(){
+        let number1 = document.getElementById('input1').value
+        let number2 = document.getElementById('input2').value
+        let result = parseFloat(number1) * parseFloat(number2)
+        document.getElementById('result').innerHTML = result
+    }
+    function dis(){
+        let number1 = document.getElementById('input1').value
+        let number2 = document.getElementById('input2').value
+        let result = parseFloat(number1) / parseFloat(number2)
+        document.getElementById('result').innerHTML = result
+    }
+</script>

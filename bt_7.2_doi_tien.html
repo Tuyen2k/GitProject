@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chuyển đổi tiền tệ</title>
+</head>
+<style>
+  th{
+    width: 200px;
+  }
+  td{
+    width: 200px;
+  }
+  select{
+    width: 50px;
+    align-items: center;
+  }
+</style>
+<body>
+  <table>
+    <tr>
+      <th>Amount</th>
+      <th align="left">From Currency</th>
+      <th align="left">To Currency</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td><input type="text" id="giatrivao"></td>
+      <td>
+        <select id="from" name="">
+          <option value="VND">VND</option>
+          <option value="USD">USD</option>
+        </select>
+      </td>
+      <td>
+        <select id="to" name="">
+          <option value="VND">VND</option>
+          <option value="USD">USD</option>
+        </select>
+      </td>
+      <td><button onclick="do_something()"/>Convert</td>
+    </tr>
+  </table>
+  <div id="result"></div>
+<script>
+  function do_something() {
+    let dauvao = document.getElementById('giatrivao').value;
+    let dong1 = document.getElementById('from').value;
+    let dong2 = document.getElementById('to').value;
+
+    if ( dong1=='VND' && dong2=='USD'){dauvao=dauvao/23000;}
+    else if(dong1=='USD' && dong2=='VND'){dauvao=dauvao*23000;}
+    document.getElementById('result').innerText = 'Result: ' + dauvao;
+  }
+</script>
+</body>
+</html>
