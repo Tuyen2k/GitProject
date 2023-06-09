@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="rs"></p>
+<p id="1"></p>
+<p id="2"></p>
+</body>
+</html>
+<script>
+    /* let a = +prompt('Nhập số thứ nhất',);
+     let b = +prompt('Nhập số thứ hai',);
+     if(a%b==0){ alert('a chia hết cho b')  }
+     else { alert('a không chia hết cho b')}*/
+</script>
+<script>
+    /*let tuoi = +prompt('Tuổi của học sinh',);
+    if(tuoi<15){ alert('Không đủ điều kiện vào lớp 10')  }
+    else { alert('Đủ điều kiện vào lớp 10')}*/
+</script>
+<script>
+    /*let number = +prompt('Number')
+    number>0?alert('Lớn hơn 0'):number<0?alert('Nhỏ hơn 0'):alert('Bằng 0');*/
+</script>
+<script>
+    /* let A = +prompt('Nhập số thứ nhất')
+     let B = +prompt('Nhập số thứ hai')
+     let C = +prompt('Nhập số thứ ba')
+     if (A>B && A>C){ alert(A) }
+     else if (B>C){alert(B)}
+     else {alert(C)}*/
+</script>
+<script>
+   /* let pointkt = parseFloat(prompt('Nhập điểm kiểm tra'));
+    let pointgiuaky = parseFloat(prompt('Nhập điểm kiểm tra'));
+    let pointcuoiky = parseFloat(prompt('Nhập điểm kiểm tra'));
+    let TB = ((pointkt + (pointgiuaky * 2) + (pointcuoiky * 3)) / 6);
+    document.getElementById('rs').innerText= 'Điểm số: ' + TB;
+    if (TB >= 8) {
+        document.getElementById('1').innerText ='Xếp hạng giỏi';
+    } else if (TB >= 6 && TB < 8) {
+        document.getElementById('1').innerText = 'Xếp hạng khá';
+    } else if (TB >= 5 && TB < 6.5) {
+        document.getElementById('1').innerText ='Xếp hạng trung bình';
+    } else {
+        document.getElementById('1').innerText ='Xếp hạng yếu';
+    }*/
+</script>
+<script>
+    let DT = parseFloat(prompt('Nhập doanh thu'));
+    if (DT < 50000000){
+        document.getElementById('2').innerHTML = 'Tiền hoa hồng: ' + eval(DT*0.05)
+    }
+    else if (DT>=50000000 && DT<100000000){
+        document.getElementById('2').innerText = 'Tiền hoa hồng: ' + eval(DT*0.07)
+    }
+    else {
+        document.getElementById('2').innerText = 'Tiền hoa hồng: ' + eval(DT*0.1)
+    }
+</script>

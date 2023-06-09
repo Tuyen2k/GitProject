@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI</title>
+</head>
+</style>
+<body>
+Weight <input type="number" id="weight" placeholder="kilogram"/>
+Height <input type="number" id="height" placeholder="meter"/>
+<button onclick="result()">Result</button>
+<p>BMI:</p>
+<div id="BMI"></div>
+<div id="BMI1"></div>
+
+</body>
+</html>
+<script>
+    function result() {
+        let w = document.getElementById('weight').value;
+        let h = document.getElementById('height').value;
+        if (w==''|| h==''){
+                alert('Vui lòng nhập lại');
+                return;
+        }
+        let BMI = getBMI(w,h);
+        document.getElementById('BMI1').innerText = BMI;
+        }
+
+    function getBMI(wei, hei) {
+        let BMI = parseFloat(wei) / Math.pow(parseFloat(hei),2);
+        if (BMI < 18.5)
+            document.getElementById('BMI').innerText= 'Underweight'
+        else if (BMI >= 18.5 && BMI < 25.0)
+            document.getElementById('BMI').innerText='Normal'
+        else if (BMI >= 25.0 && BMI < 30.0)
+            document.getElementById('BMI').innerText= 'Overweight'
+        else document.getElementById('BMI').innerText= 'Obese'
+        return BMI;
+    }
+</script>

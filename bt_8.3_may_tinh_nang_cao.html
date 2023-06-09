@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<table  border="1" width="200px">
+  <tr>
+    <td colspan="4"><input type="text"id="result" style="height: 20px"/></td>
+  </tr>
+  <tr>
+    <td><button onclick="caculator(this.value)" value="1" >1</button> </td>
+    <td><button onclick="caculator(this.value)" value="2" >2</button> </td>
+    <td><button onclick="caculator(this.value)" value="3" >3</button> </td>
+    <td><button onclick="caculator(this.value)" value="+" >+</button> </td>
+  </tr>
+  <tr>
+    <td><button onclick="caculator(this.value)" value="4">4</button> </td>
+    <td><button onclick="caculator(this.value)" value="5" >5</button> </td>
+    <td><button onclick="caculator(this.value)" value="6" >6</button> </td>
+    <td><button onclick="caculator(this.value)" value="-" >-</button> </td>
+  </tr>
+  <tr>
+    <td><button onclick="caculator(this.value)" value="7" >7</button> </td>
+    <td><button onclick="caculator(this.value)" value="8" >8</button> </td>
+    <td><button onclick="caculator(this.value)" value="9" >9</button> </td>
+    <td><button onclick="caculator(this.value)" value="*">*</button> </td>
+  </tr>
+  <tr>
+    <td><button onclick="Clear()">C</button></td>
+    <td><button onclick="caculator(this.value)" value="0" >0</button> </td>
+    <td><button onclick="Result()">=</button> </td>
+    <td><button onclick="caculator(this.value)" value="/">/</button> </td>
+  </tr>
+</table>
+</body>
+</html>
+<script>
+  function caculator(value){
+    let result = document.getElementById('result').value;
+    document.getElementById('result').value = result + value;
+  }
+  function Result(){
+    let result = document.getElementById('result').value;
+    document.getElementById('result').value = eval(result);
+  }
+  function Clear(){
+    document.getElementById('result').value = '';
+  }
+</script>
