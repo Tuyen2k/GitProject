@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do you love me</title>
+</head>
+<body>
+<p>Do you love me?</p> <br>
+<button onclick="doclick()" value="Yes" >Yes</button>
+<button id="No" onmouseover="Mouseover()" value="no">No</button>
+</body>
+</html>
+<script>
+  function doclick(){
+    alert('Yes, you are right!')
+  }
+  function Mouseover(){
+      run = document.getElementById('No')
+    var x = Math.round(Math.random() * window.innerWidth)
+    var y = Math.round(Math.random() * window.innerHeight)
+      run.style.position =  'relative';
+    document.getElementById('No').style.top = x + 'px';
+    document.getElementById('No').style.left = y + 'px';
+  }
+</script>

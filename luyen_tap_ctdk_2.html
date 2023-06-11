@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập</title>
+</head>
+<style>
+    th {
+        width: 200px;
+    }
+
+    td {
+        width: 200px;
+    }
+
+    select {
+        width: 50px;
+        align-items: center;
+    }
+</style>
+<body>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th align="left">From temperature</th>
+        <th align="left">To temperature</th>
+        <th></th>
+    </tr>
+    <tr>
+        <td><input type="text" id="giatrivao"></td>
+        <td>
+            <select id="from" name="">
+                <option value="C">C</option>
+                <option value="F">F</option>
+            </select>
+        </td>
+        <td>
+            <select id="to" name="">
+                <option value="C">C</option>
+                <option value="F">F</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="thaydoi()"/>
+            Convert
+        </td>
+    </tr>
+</table>
+<br>
+<br>
+<div id="result"></div>
+</body>
+</html>
+<script>
+    /* function thaydoi() {
+         let dauvao = document.getElementById('giatrivao').value;
+         let doC = document.getElementById('from').value;
+         let doF = document.getElementById('to').value;
+         if ( doC=='C' && doF=='F'){(dauvao=(dauvao * 9) / 5 + 32)}
+         else if(doC=='F' && doF=='C'){(dauvao=(dauvao - 32) * 5 / 9)}
+         document.getElementById('result').innerText = 'Result: ' + dauvao
+     }*/
+</script>
+<script>
+    /*let ft = parseFloat(prompt('Nhap m'))*3.2808;
+    alert('ft = '+ft);*/
+</script>
+<script>
+    /*let r = parseFloat(prompt('Cạnh a'))
+    let Shv = r*r
+    alert('Diện tích hình vuông: ' + Shv);*/
+</script>
+<script>
+    /*let dai = parseFloat(prompt('Chiều dài hình chữ nhật'));
+    let rong = parseFloat(prompt('Chiều rộng hình chữ nhật'));
+    let Shch = dai  * rong;
+    alert('Diện tích hình chữ nhật: '+ Shch );*/
+</script>
+<script>
+    /* let canha = parseFloat(prompt('Chiều dài cạnh a'));
+     let canhb = parseFloat(prompt('Chiều dài cạnh b'));
+     let Shtgv = canha*canhb/2;
+     alert('Diện tích hình chữ nhật: '+ Shtgv );*/
+</script>
+<script>
+    /*let A = parseFloat(prompt('Nhập a'))
+    let B = parseFloat(prompt('Nhập B'))
+    let C = (-B)/A
+    if (A==0){
+        if (B==0){
+            alert('Phương trình vô số nghiệm')
+        }
+        else alert('Phương trình vô nghiệm')
+    }else alert('Nghiệm của phương trình: ' + C)*/
+</script>
+,
+<script>
+   /* let x = parseFloat(prompt('Nhập x'));
+    let y = parseFloat(prompt('Nhập y'));
+    let z = parseFloat(prompt('Nhập z'));
+    let delta = y*y-4*x*z
+    if (x==0){alert('Phương trình vô nghiệm');}
+    else if (delta < 0){alert('Phương trình vô nghiệm');}
+    else if (delta ==0){
+        alert('Nghiệm của phương trình: ' +(-y/(2*x)));
+    }
+    else {alert('Nghiệm của phương trình là: nghiệm 1: '+(-y+Math.sqrt(delta))/2*x + ' nghiệm 2: '+(-y-Math.sqrt(delta))/2*x);
+    }*/
+</script>
+<script>
+    /*let t = +prompt('nhập cạnh a');
+    let y = +prompt('nhập cạnh b');
+    let u = +prompt('nhập cạnh c');
+    if (t>0 && y>0 && u>0){
+        if (t+y-u>0 && t+u-y>0 && u+y-t>0){
+            alert('a, b, c là cạnh của 1 tam giác');
+        }
+        else {alert('a, b, c không là cạnh của 1 tam giác')}
+    }else {alert('a, b, c không là cạnh của 1 tam giác')}*/
+</script>
+<script>
+    /*let tuoi = Number.isInteger(prompt('Nhập tuổi của một người', ''));
+    if ((tuoi) == true) {
+        if (tuoi < 120 && tuoi > 0) {
+            alert('Đây là tuổi của một người');
+        } else {
+            alert('Đây không phải là tuổi của một người');
+        }
+    } else {
+        alert('Đây không phải là tuổi của một người');
+    }*/
+</script>
+<script>
+    /*let sodien = parseFloat(prompt('Nhập số điện'));
+    let bac1 = 1.484
+    let bac2 = 1.533
+    let bac3 = 1.786
+    let bac4 = 2.242
+    let bac5 = 2.503
+    let bac6 = 2.587
+    if (sodien<0){
+        alert('Vui lòng nhập số điện của bạn');
+    }else if (sodien<=50){
+        alert('Số tiền bạn phải trả là: '+ (sodien*bac1));
+    }else if (sodien<=100){
+        alert('Số tiền bạn phải trả là: '+ (50*bac1+(sodien-50)*bac2));
+    }else if (sodien<=200){
+        alert('Số tiền bạn phải trả là: '+ (50*bac1+50*bac2+(sodien-100)*bac3));
+    }else if (sodien<=300){
+        alert('Số tiền bạn phải trả là: '+ (50*bac1+50*bac2+100*bac3+(sodien-200)*bac4));
+    } else if (sodien<=400){
+        alert('Số tiền bạn phải trả là: '+ (50*bac1+50*bac2+100*bac3+100*bac4+(sodien-300)*bac5));
+    }else{
+        alert('Số tiền bạn phải trả là: '+ (50*bac1+50*bac2+100*bac3+100*bac4+100*bac5+(sodien-400)*bac6));
+    }*/
+</script>
+<script>
+    /*let tongthunhap = parseFloat(prompt('Nhập tổng thu nhập đơn vị nghìn VND'));
+    let nguoiphuthuoc = parseFloat(prompt('Nhập số người phụ thuộc'));
+    let tinhthue = tongthunhap - 11000 - nguoiphuthuoc*4400;
+    if (tinhthue<0){
+        alert('Thuế thu nhập cá nhân phải nộp: '+0);
+    }else if (tinhthue<=5000){
+        alert('Thuế thu nhập cá nhân phải nộp: '+(tinhthue*5/100) + ' nghìn VND');
+    }else if (tinhthue<=10000){
+        alert('Thuế thu nhập cá nhân phải nộp: '+(tinhthue*10/100-250)+ ' nghìn VND');
+    }else if (tinhthue<=18000){
+        alert('Thuế thu nhập cá nhân phải nộp: '+(tinhthue*15/100-750)+ ' nghìn VND');
+    }else if (tinhthue<=32000){
+        alert('Thuế thu nhập cá nhân phải nộp: '+(tinhthue*20/100-1650)+ ' nghìn VND');
+    }else if (tinhthue<=52000){
+        alert('Thuế thu nhập cá nhân phải nộp: '+(tinhthue*25/100-3250)+ ' nghìn VND');
+    } else if (tinhthue<=80000){
+        alert('Thuế thu nhập cá nhân phải nộp: '+(tinhthue*30/100-5850)+ ' nghìn VND');
+    }else if (tinhthue>80000){
+        alert('Thuế thu nhập cá nhân phải nộp: '+(tinhthue*35/100-9850)+ ' nghìn VND');
+    }*/
+</script>

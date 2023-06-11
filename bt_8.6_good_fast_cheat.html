@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng Good-Fast-Cheat</title>
+</head>
+<body>
+<label>
+     <span>
+         <input type="checkbox" id="good" class="button" onclick="onswitch('cheap','fast')">Good
+    </span>
+</label>
+<label>
+    <span>
+         <input type="checkbox" id="fast" class="button"onclick="onswitch('cheap','good')">Fast
+    </span>
+</label>
+<label>
+    <span>
+         <input type="checkbox" id="cheap" class="button" onclick="onswitch('good','fast')">Cheap
+    </span>
+</label>
+</body>
+</html>
+<script>
+    function onswitch(c,f) {
+        var isCheap = document.getElementById(c).checked;
+        var isFast = document.getElementById(f).checked;
+        if (isCheap && isFast) {
+            if (Math.random() < 0.5) {
+                document.getElementById(c).checked = false;
+            } else {
+                document.getElementById(f).checked = false;
+            }
+        }
+    }
+</script>
