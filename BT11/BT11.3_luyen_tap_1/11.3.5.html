@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng của 20 số đầu của dãy Fibonaci</title>
+</head>
+<body>
+<script>
+  let n0=0
+  let n1=1
+  let nextnum;
+  let tong= n0 + n1
+  document.write(n0+'<br>');
+  document.write(n1+'<br>');
+  for (let i=1;i<=18;i++){
+    nextnum=n0+n1
+    n0=n1;
+    n1=nextnum;
+    document.write(nextnum+'<br>');
+    tong += nextnum
+  }
+  document.write('Tổng 20 số đầu trong dãy Fibonanci = '+ tong)
+</script>
+</body>
+</html>

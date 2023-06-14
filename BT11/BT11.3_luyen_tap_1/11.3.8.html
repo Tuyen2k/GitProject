@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trò chơi đoán số</title>
+</head>
+<body>
+<button onclick="doanso()">Chơi gamme</button>
+</body>
+</html>
+<script>
+    function doanso() {
+        let x = parseInt(prompt('Nhập vào khoảng bạn muốn đoán: '))
+        let y = Math.floor(Math.random() * x)
+        let z = parseInt(prompt('Nhập giá trị bạn muốn đoán:'))
+        for (i = 1; i <= 3; i++) {
+            if (i === 3) {
+                alert('Bạn đã hết lượt chơi');
+            } else if (z > y) {
+                z = parseInt(prompt('Số bạn đoán lớn hơn đáp án'));
+            } else if (z < y) {
+                z = parseInt(prompt('Số bạn đoán nhỏ hơn đáp án'));
+            } else {
+                alert('Xin chúc mừng. Bạn đã đoán đúng!');
+                break
+            }
+        }
+    }
+</script>

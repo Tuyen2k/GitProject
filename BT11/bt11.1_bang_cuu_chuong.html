@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bảng cửu chương</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let tap;
+  tap = '<table border="1">'
+  for ( I=1;I<10;I++){
+    tap = tap + '<tr>';
+    for ( J=2;J<10;J++){
+      tap = tap + '<td>' +I+ ' * '+J+' = '+ I*J + '</td>';
+    }
+    tap = tap + '</tr>';
+  }
+  tap = tap + '</table>';
+  document.write(tap);
+</script>

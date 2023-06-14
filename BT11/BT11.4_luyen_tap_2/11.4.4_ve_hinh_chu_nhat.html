@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ Hình Chữ Nhật</title>
+</head>
+<body>
+<script>
+    let a = '';
+    let b = '';
+    let c = '';
+    for (let i = 1; i <= 22; i++) {
+        a += '*'
+    }
+    a += '<br>'
+    document.write(a)
+    for (let h = 1; h <=3; h++) {
+        for (let j = 1; j <= 22; j++) {
+            if (j == 1 || j == 22) {
+                b += '*'
+            } else {
+                b += '&nbsp&nbsp'
+            }
+        }
+        b+='<br>'
+        document.write(b)
+    }
+    for (let i = 1; i <= 22; i++) {
+        c += '*'
+    }
+    c += '<br>'
+    document.write(c)
+</script>
+</body>
+</html>

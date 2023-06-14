@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị 20 số đầu trong dãy Fibonacci</title>
+</head>
+<body>
+<script>
+  // const numbe = parseInt(prompt('Enter the number of term:'))
+  let n0=0
+  let n1=1
+  let nextnum;
+  document.write(n0+'<br>');
+  document.write(n1+'<br>');
+  for (let i=1;i<=18;i++){
+    nextnum=n0+n1
+    n0=n1;
+    n1=nextnum;
+    document.write(nextnum+'<br>');
+  }
+</script>
+</body>
+</html>

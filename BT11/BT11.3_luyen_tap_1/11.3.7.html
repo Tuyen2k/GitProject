@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FizzBuzz</title>
+</head>
+<body>
+<script>
+  for (let l = 1; l <= 100; l++) {
+    if (l % 3 == 0 && l % 5 == 0) {
+      document.write('FizzBuzz' + '<br>');
+      continue;
+    } else if (l % 3 == 0) {
+      document.write('Fizz' + '<br>');
+      continue;
+    } else if (l % 5 == 0) {
+      document.write('Buzz' + '<br>');
+      continue;
+    }
+    document.write(l + '<br>')
+  }
+</script>
+</body>
+</html>

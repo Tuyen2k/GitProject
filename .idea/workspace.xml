@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="22426e3b-7ed8-43a3-b861-2387eed8b571" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/8.5_do_you_love_me.html" beforeDir="false" afterPath="$PROJECT_DIR$/8.5_do_you_love_me.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +46,16 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="vd_lap.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/MD1/vd_lap.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.vd_lap.html" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -60,6 +71,7 @@
       <workItem from="1686143342039" duration="3137000" />
       <workItem from="1686192478863" duration="43239000" />
       <workItem from="1686366154885" duration="26906000" />
+      <workItem from="1686538053080" duration="52550000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In dãy Fibonacci</title>
+</head>
+<body>
+<script>
+  const numbe = parseInt(prompt('Enter the number of term:'))
+  let n0 = 0
+  let n1 = 1
+  let nextnum;
+  for (let i = 1; i <= numbe; i++) {
+    document.write(n0 + '<br>');
+    nextnum = n0 + n1
+    n0 = n1;
+    n1 = nextnum;
+  }
+</script>
+</body>
+</html>
