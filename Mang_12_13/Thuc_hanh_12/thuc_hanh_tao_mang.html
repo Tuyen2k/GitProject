@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo và thao tác với mảng</title>
+</head>
+<body>
+<h2>Sample Screen:</h2>
+<input type="text" id="inputnumber">
+<button id="add" onclick="add_array()">Add</button>
+<button id="display" onclick="display_array()">Display</button>
+<div id="result"></div>
+</body>
+</html>
+<script>
+    let x = 0
+    let array = Array()
+
+    function add_array() {
+        array[x] = document.getElementById('inputnumber').value;
+        alert('Element: ' + array[x] + ' Added at index ' + x)
+        x++;
+        document.getElementById('inputnumber').value = ''
+    }
+
+    function display_array() {
+        let y = '<hr>';
+        for (i = 0; i < array.length; i++) {
+            y += 'Element ' + i + ' = ' + array[i] + '<br>';
+        }
+        document.getElementById('result').innerHTML = y;
+    }
+
+    console.log(array)
+</script>

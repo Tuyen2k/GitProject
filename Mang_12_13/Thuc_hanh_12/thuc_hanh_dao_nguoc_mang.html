@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo ngược vị trí các phần tử trong mảng</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a = [3, 41, 23, 6, 11, 21];
+    // let first = 0
+    // let last = a.length - 1
+    // while (first < last) {
+    //     let b = a[first];
+    //     a[first] = a[last];
+    //     a[last] = b;
+    //     first++;
+    //     last--
+    // }
+    // document.write(a.join(', ') + '<br>');
+    // let maxArray = a[0]
+    // let index = -1
+    // // for (i = 0; i < a.length; i++) {
+    // //     if (maxArray < a[i]) {
+    // //         maxArray = a[i];
+    // //         index = i;
+    // //     }
+    // // }
+    // document.write('Số lớn nhất trong dãy là ' + maxArray + '<br>');
+    // document.write('Chỉ số của số lớn nhất là ' + index);
+    let c = +prompt('Nhập vào 1 số: ')
+    let index = -1
+    for (j = 0; j < a.length; j++) {
+        if (c == a[j]) {
+            index = j; break;
+            // alert('Value ' + a[j] + ' found at ' + j)
+        }
+    }
+    if (index > -1) {
+        alert('Value ' + c + ' found at ' + j );
+    } else {
+        alert('Value ' + c + ' not found');
+    }
+</script>
