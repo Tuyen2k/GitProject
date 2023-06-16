@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+
+<input type="text" id="input" placeholder="Enter text">
+<button onclick="Click()">Translation</button>
+<br>
+<br>
+<div id="result"></div>
+
+
+</body>
+</html>
+<script>
+    function Click() {
+        let vn = ['chó', 'mèo', 'lợn', 'gà', 'chim', 'chuột', 'rồng']
+        let el = ['dog', 'cat', 'pig', 'chicken', 'bird', 'mouse', 'dragon']
+        let a = document.getElementById("input").value
+        let result = ''
+        let index_el = -1
+        for (let i = 0; i < el.length; i++) {
+            if (a == el[i]) {
+                index_el = i
+                for (let j = 0; j < vn.length; j++) {
+                    if (index_el == j) {
+                        result = vn[j]
+                    }
+                }
+            }
+        }
+        document.getElementById("result").innerHTML = result
+    }
+</script>

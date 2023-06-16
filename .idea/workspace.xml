@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="22426e3b-7ed8-43a3-b861-2387eed8b571" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BT11/bt11.1_bang_cuu_chuong.html" beforeDir="false" afterPath="$PROJECT_DIR$/BT11/bt11.1_bang_cuu_chuong.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mang_12_13/Thuc_hanh_12/thuc_hanh_co_caro.html" beforeDir="false" afterPath="$PROJECT_DIR$/Mang_12_13/Thuc_hanh_12/thuc_hanh_co_caro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mang_12_13/Thuc_hanh_12/thuc_hanh_dao_nguoc_mang.html" beforeDir="false" afterPath="$PROJECT_DIR$/Mang_12_13/Thuc_hanh_12/thuc_hanh_dao_nguoc_mang.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +47,10 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JavaScript Debug.thuc_hanh_co_caro.html">
+  <component name="RunManager" selected="JavaScript Debug.BT_13.5.8.html">
+    <configuration name="BT_13.5.8.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BT_11.2_so_nguyen_to.html/Mang_12_13/bt_array/BT_13.5/BT_13.5.8.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="thuc_hanh_co_caro.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BT_11.2_so_nguyen_to.html/BT11/Mang_12_13/thuc_hanh_co_caro.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -58,6 +62,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.BT_13.5.8.html" />
         <item itemvalue="JavaScript Debug.thuc_hanh_co_caro.html" />
         <item itemvalue="JavaScript Debug.vd_array.html" />
         <item itemvalue="JavaScript Debug.vd_lap.html" />
@@ -83,6 +88,9 @@
       <workItem from="1686710806855" duration="762000" />
       <workItem from="1686715287131" duration="6440000" />
       <workItem from="1686751209917" duration="6290000" />
+      <workItem from="1686796768957" duration="15612000" />
+      <workItem from="1686834809698" duration="14326000" />
+      <workItem from="1686884900139" duration="5444000" />
     </task>
     <servers />
   </component>

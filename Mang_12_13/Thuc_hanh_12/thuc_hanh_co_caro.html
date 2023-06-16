@@ -17,8 +17,12 @@
     let a = [];
     let data = '';
     for (let i = 0; i < 10; i++) {
-        a[i] = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+        a[i] = []
+        for (let j=0;j<10;j++){
+            a[i][j]=0
+        }
     }
+    console.log(a)
     for (let i = 0; i < 10; i++) {
         data += "<br/>";
         for (j = 0; j < 10; j++) {
@@ -26,17 +30,18 @@
         }
     }
     document.getElementById('caro_game').innerHTML = data
-function change_value(){
-        let N = prompt('Nhập vào giá trị vào hàng: ');
-        let M = prompt('Nhập vào giá trị vào cột: ');
-        data='';
-        a[N][M]='x';
-        for (i=0;i<10;i++){
-            data+='<br>';
-            for (j=0;j<10;j++){
-                data+=a[i][j]+'&nbsp;&nbsp';
-            }
-        }
-    document.getElementById('caro_game').innerHTML = data
-}
+
+// function change_value(){
+//         let N = prompt('Nhập vào giá trị vào hàng: ');
+//         let M = prompt('Nhập vào giá trị vào cột: ');
+//         data='';
+//         a[N][M]='x';
+//         for (i=0;i<10;i++){
+//             data+='<br>';
+//             for (j=0;j<10;j++){
+//                 data+=a[i][j]+'&nbsp;&nbsp';
+//             }
+//         }
+//     document.getElementById('caro_game').innerHTML = data
+// }
 </script>

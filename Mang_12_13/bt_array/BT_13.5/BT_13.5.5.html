@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số âm trong chuỗi</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a = prompt('Nhập vào một chuỗi các giá trị:')
+    let b = a.split(',')
+    let c = 0
+    console.log(b)
+    for (i=0;i<b.length;i++){
+        if(b[i]<0){
+            document.write(b[i]+'<br>');
+            c+=1;
+        }
+    }
+    document.write('Số giá trị âm trong chuỗi là: '+ c);
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo vị trí các phần tử trong mảng</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let n = prompt("Nhập độ dài của mảng: ")
+    let a = []
+    for (let i = 0; i < n; i++) {
+        let b = +prompt('Nhập phần tử thứ ' + (i + 1))
+        a.push(b)
+    }
+    document.write(a.join(', ')+'<br>')
+    let first = 0
+    let last = a.length - 1
+    let tg = 0
+    for (let i = 0; first < last; i++) {
+        tg = a[first];
+        a[first] = a[last];
+        a[last] = tg;
+        first++;
+        last--;
+    }
+    document.write(a.join(', '))
+</script>

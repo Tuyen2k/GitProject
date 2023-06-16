@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập 2</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let a = prompt('Nhập vào mốt chuỗi: ')
+  let b = a.split('')
+  let c = b
+  document.write(b.join(', ')+'<br>')
+  for (let i=0;i<c.length;i++){
+      if (c[i]==='-'){
+          c.splice(i,1,'_')
+      }
+  }
+  document.write(c.join(', '))
+  // for (let i = 0; i<b.length;i++){
+  //   if ( isNaN(b[i]) != true){
+  //     c +=  1
+  //     document.write(b[i] + '<br>')
+  //   }
+  // }
+  // document.write('Trong chuỗi có: '+c +' ký tự số')
+</script>

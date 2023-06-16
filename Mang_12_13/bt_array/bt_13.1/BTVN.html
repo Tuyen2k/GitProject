@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm giá trị trong mảng 2 chiều</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let a = prompt('Nhập độ dài của mảng: ')
+  let b = prompt('Nhập số phần tử có trong một đơn vị độ dài: ')
+  let c = []
+  for (i=0;i<a;i++){
+      c[i]=[]
+    for (j=0;j<b;j++){
+        c[i][j]= +prompt('Nhập phần tử hàng thứ ' + (i+1) +' và cột thứ '+(j+1))
+    }
+  }
+  console.log(c)
+  let d = 0
+  for (i=0;i<a;i++){
+      for (j=0;j<b;j++){
+          if ( c[i][j]===5){
+              d+=1
+          }
+      }
+  }
+      document.write('Có '+d+' giá trị 5 trong mảng' );
+</script>

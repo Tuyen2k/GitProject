@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sắp xếp mảng với giá trị các phần tử giảm dần</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let arr = [];
+  for (let i = 0; i < 10; i++) {
+    let c = +prompt('Nhập phần tử thứ '+ (i+1))
+    arr.push(c)
+  }
+  let a = 0
+  for (let i = 0; i < 10; i++) {
+    for (let j = i+1; j < 10; j++) {
+      if (arr[i]<arr[j]){
+       a = arr[i]
+        arr[i]=arr[j]
+        arr[j]=a
+      }
+    }
+  }
+  console.log(arr)
+</script>

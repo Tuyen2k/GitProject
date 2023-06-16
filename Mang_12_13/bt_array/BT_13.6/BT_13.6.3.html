@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm ký tự số trong mảng</title>
+</head>
+<body>
+
+</body>
+</html>
+<!--<script>-->
+<!--  let n = prompt('Nhập các ký tự')-->
+<!--  let kyTu= 0-->
+<!--  let number = '0123456789'-->
+<!--  for (i=0;i<n.length;i++){-->
+<!--    if (number.indexOf(n[i]) > -1){-->
+<!--      kyTu+=1-->
+<!--    }-->
+<!--  }-->
+<!--  console.log(n)-->
+<!--  console.log(kyTu)-->
+<!--</script>-->
+<script>
+  let n = +prompt('Độ dài của mảng')
+  let kyTu= 0
+  let number = '0123456789'
+  let arr=[]
+  for (i=0;i<n;i++){
+    let a = prompt('Nhập các phần tử '+(i+1))
+    arr.push(a)
+  }
+
+  console.log(arr.join(''))
+  for (i=0;i<arr.length;i++){
+    if (number.indexOf(arr[i]) > -1){
+      kyTu+=1
+    }
+  }
+  console.log(kyTu)
+</script>

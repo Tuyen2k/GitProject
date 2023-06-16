@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a = +prompt('Nhập độ dài của mảng:')
+    let arr = [];
+    for (let i = 0; i < a; i++) {
+        let c = +prompt('Nhập phần tử thứ '+ (i+1))
+        arr.push(c)
+    }
+    document.write(arr+'<br>')
+    let inputNumber = +prompt('Nhập vào giá trị V cần tìm:')
+    let index = -1
+    for (let i = 0; i < arr.length; i++) {
+        if (inputNumber === arr[i]){
+            index = i;
+            arr.splice(i,1);
+            arr.push(0)
+        }
+    }
+    console.log(arr)
+    if (index>-1){
+        document.write('V is in the array ' +'<br>'+ 'index V is '+index)
+
+    }else {
+        document.write('V is not in the array')
+    }
+</script>

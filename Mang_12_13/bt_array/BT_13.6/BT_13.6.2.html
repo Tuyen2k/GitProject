@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In mảng đảo ngược</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let arr = ['1','2','3','a','b','c','d','1'];
+  let first = 0
+  let last = arr.length
+  let tg = 0
+  for (let i = 0; first < last ; i++) {
+    tg = arr[first]
+    arr[first]=arr[last]
+    arr[last]=tg
+    first++
+    last--
+  }
+  document.write(arr.join('&nbsp;&nbsp;'))
+</script>
