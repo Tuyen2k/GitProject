@@ -8,33 +8,20 @@
 
 </body>
 </html>
-<!--<script>-->
-<!--  let n = prompt('Nhập các ký tự')-->
-<!--  let kyTu= 0-->
-<!--  let number = '0123456789'-->
-<!--  for (i=0;i<n.length;i++){-->
-<!--    if (number.indexOf(n[i]) > -1){-->
-<!--      kyTu+=1-->
-<!--    }-->
-<!--  }-->
-<!--  console.log(n)-->
-<!--  console.log(kyTu)-->
-<!--</script>-->
 <script>
-  let n = +prompt('Độ dài của mảng')
-  let kyTu= 0
-  let number = '0123456789'
-  let arr=[]
-  for (i=0;i<n;i++){
-    let a = prompt('Nhập các phần tử '+(i+1))
-    arr.push(a)
-  }
-
-  console.log(arr.join(''))
-  for (i=0;i<arr.length;i++){
-    if (number.indexOf(arr[i]) > -1){
-      kyTu+=1
+    let n = +prompt('Độ dài của mảng')
+    let c = 0
+    let arr = []
+    for (i = 0; i < n; i++) {
+        let a = prompt('Nhập các phần tử ' + (i + 1))
+        arr.push(a)
+        if (isNaN(arr[i]) !== true) {
+            c += 1
+            document.write(arr[i] + '<br>')
+        }
     }
-  }
-  console.log(kyTu)
+    document.write('<br>')
+    document.write(arr)
+    document.write('<br>')
+    document.write('Trong chuỗi có: ' + c + ' ký tự số')
 </script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra ký tự</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let str = prompt('Nhập vào một chuỗi các ký tự: ')
+    let array = str.split('')
+    document.write('Mảng: '+array)
+    document.write('<br>')
+    let kytu = prompt('Nhập vào 1 ký tự: ')
+    let check_character = character_check(array, kytu)
+    document.write('Số lần xuất hiện của ký tự ' + kytu + ' là: ' + check_character)
+
+    function
+    character_check(array, str) {
+        let index = -1
+        for (let i = 0; i < array.length; i++) {
+            if (str === array[i]) {
+                index++
+            }
+        }
+        if (index !== -1) {
+            return index + 1;
+        } else {
+            return index
+        }
+    }
+</script>

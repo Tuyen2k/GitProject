@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giai thừa</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let number = parseFloat(prompt('Nhập vào một số'))
+    let result = factorial(number)
+    function factorial(number) {
+        let factorial = 1
+        for (let i = 0; i < number; i++) {
+            factorial = factorial * (number - i)
+        }
+        return factorial
+    }
+    alert('Gia thừa của số ' + number + ' là: ' + result)
+</script>
+<!--<script>-->
+<!--    let a = func1(parseFloat(prompt('Nhập vào một số')))-->
+<!--    alert('Gia thừa: ' + a)-->
+
+<!--    function func1(a) {-->
+<!--        if (a === 2)-->
+<!--            return 2;-->
+<!--        return a * func1(a - 1);-->
+<!--    }-->
+<!--</script>-->

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi chỗ các số</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let str = prompt('Nhập vào 1 chuỗi: ')
+    let array = str.split(' ')
+    document.write(array)
+    document.write('<br>')
+    document.write('<br>')
+    let arr1 = swap(array)
+    document.write(arr1)
+
+    function swap(arr) {
+        let temp = 0
+        let first = 0
+        let last = arr.length - 1
+        for (let i = 0; first < last; i++) {
+            temp = arr[first]
+            arr[first] = arr[last]
+            arr[last] = temp
+            first++
+            last--
+        }
+        return arr
+    }
+</script>

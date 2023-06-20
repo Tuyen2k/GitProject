@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số nguyên tố</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    // let n = +prompt('Nhập vào một số: ')
+    // let check_prime = isPrime(n)
+    // alert(check_prime)
+    //
+    // function isPrime(number) {
+    //     if (number<2){
+    //         return false
+    //     }
+    //     for (let i = 2; i<=Math.sqrt(number); i++) {
+    //         if (number % i === 0) {
+    //             return false
+    //         }
+    //     }
+    //     return true
+    // }
+    isPrime()
+
+    function isPrime(number) {
+        for (let i = 2; i < 1000; i++) {
+            let index = 0
+            for (let j = 2; j <= Math.sqrt(i); j++) {
+                if (i % j === 0) {
+                    index += 1
+                }
+            }
+            if (index === 0) {
+                console.log(i)
+            }
+        }
+    }
+</script>

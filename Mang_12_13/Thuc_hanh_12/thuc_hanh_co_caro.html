@@ -31,17 +31,17 @@
     }
     document.getElementById('caro_game').innerHTML = data
 
-// function change_value(){
-//         let N = prompt('Nhập vào giá trị vào hàng: ');
-//         let M = prompt('Nhập vào giá trị vào cột: ');
-//         data='';
-//         a[N][M]='x';
-//         for (i=0;i<10;i++){
-//             data+='<br>';
-//             for (j=0;j<10;j++){
-//                 data+=a[i][j]+'&nbsp;&nbsp';
-//             }
-//         }
-//     document.getElementById('caro_game').innerHTML = data
-// }
+function change_value(){
+        let N = prompt('Nhập vào giá trị vào hàng: ');
+        let M = prompt('Nhập vào giá trị vào cột: ');
+        data='';
+        a[N][M]='x';
+        for (i=0;i<10;i++){
+            data+='<br>';
+            for (j=0;j<10;j++){
+                data+=a[i][j]+'&nbsp;&nbsp';
+            }
+        }
+    document.getElementById('caro_game').innerHTML = data
+}
 </script>

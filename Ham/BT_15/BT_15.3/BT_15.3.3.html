@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let number1 = +prompt('Nhập số thứ nhất: ')
+    let number2 = +prompt('Nhập số thứ hai: ')
+    let result = display(number1, number2);
+    alert('Tổng của hai số là: ' + result)
+
+    function display(a, b) {
+        if (a > b) {
+            alert('Giá trị số thứ nhất là ' + a + ' lớn hơn giá trị số thứ hai là ' + b)
+        } else return a + b;
+    }
+</script>

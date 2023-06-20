@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi feet và meter</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let feet = meterToFoot(parseFloat(prompt("Nhập vào giá trị meter:")))
+    alert(feet)
+    let meter = footToMeter(parseFloat(prompt("Nhập vào giá trị foot:")))
+    alert(meter)
+
+    function footToMeter(foot) {
+        return 3.279 * foot
+    }
+
+    function meterToFoot(meter) {
+        return 0.305 * meter
+    }
+</script>

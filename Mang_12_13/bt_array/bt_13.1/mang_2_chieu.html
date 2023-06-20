@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a = [
+        [1, 2, 3, 4, 5],
+        [9, 6, 3, 0, 3],
+        [7, 4, 1, 2, 4],
+        [7, 9, 1, 8, 6],
+        [9, 6, 3, 0, 9]
+    ]
+    let cheochinh = 0
+    let cheophu = 0
+    for (let i = 0; i < a.length; i++) {
+        for (let j = 0; j < a[i].length; j++) {
+            if (i === j) {
+                cheochinh += a[i][j]
+            }
+            if (i+j===a.length-1){
+                cheophu += a[i][j]
+            }
+        }
+    }
+    document.write('Tổng đường chéo chính: '+cheochinh)
+    document.write('<br>')
+    document.write('Tổng đường chéo phụ: '+cheophu)
+</script>

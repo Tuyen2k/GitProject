@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra chuỗi đối xứng</title>
+</head>
+<body>
+
+</body>
+</html>
+<!--<script>-->
+<!--    let s = prompt('Nhập vào một chuỗi:')-->
+<!--    let arr = s.split('')-->
+<!--    console.log(arr)-->
+<!--    let str = isPalindrome(arr)-->
+<!--    alert(str)-->
+
+<!--    function isPalindrome(s) {-->
+<!--        let flag = true-->
+<!--        for (let i = 0; i < s.length / 2; i++) {-->
+<!--            if (s[i] !== s[s.length - i - 1]) {-->
+<!--                flag = false-->
+<!--            } else break;-->
+<!--        }-->
+<!--        return flag-->
+<!--    }-->
+<!--</script>-->
+<script>
+    let s = prompt('Nhập vào một chuỗi:')
+    let arr = s.split('')
+    let i = 0
+    let result = isPalindrome(i)
+    alert(result)
+    function isPalindrome(index) {
+        let flag = true
+       if (arr[index] !== arr[arr.length - index - 1]){
+           flag = false
+       }
+       else if (index<arr.length - index - 1){
+           return isPalindrome(index+1)
+       }
+       return flag
+    }
+</script>

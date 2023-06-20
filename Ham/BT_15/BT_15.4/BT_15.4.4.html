@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra giá trị nhập vào là số hay không</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let value = isNumber(prompt('Nhập vào một ký tự'))
+  alert(value)
+  function isNumber(value){
+    if (isNaN(value)){ return false
+      // alert('Giá trị nhập vào không phải là ký tự số')
+    }else { return true
+        // alert('Giá trị nhập vào là ký tự số')
+    }
+  }
+</script>
