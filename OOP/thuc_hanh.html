@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  //cách 1 khởi tạo đối tượng: sử dụng hàm
+  function Student(id, name, address){
+    this.id = id
+    this.name = name
+    this.address = address
+    this.getInfor = function (){
+      return 'id = '+this.id+' tên '+ this.name + ' địa chỉ '+this.address
+    }
+  }
+var student = new Student(1, 'Nguyen Duc Tuyen', 'Hàn Nội')
+  console.log(student.getInfor())
+</script>
+<script>
+  //cách 2 khởi tạo đối tượng: sử dụng object literals
+  var student = {
+    id: 1,
+    name: 'Nguyễn đức Tuyến',
+    address: 'Hà nội',
+    getInfor: function () {
+      return 'id = '+this.id+' tên '+ this.name + ' địa chỉ '+this.address
+    }
+  }
+  console.log(student.name)
+</script>
+<script>
+  //cách 3 khởi tạo đối tượng: singleton sử dụng 1 hàm
+  let apple = new function() {
+    this.type = "macintosh";
+    this.color = "red";
+    this.getInfo = function () {
+      return this.color + ' ' + this.type + ' apple';
+    };
+  }
+  console.log(apple)
+</script>
+<script>
+  let person = {
+    name: ['Bob', 'Smith'],
+    age: 32,
+    gender: 'male',
+    interests: ['music', 'skiing'],
+    bio: function() {
+      alert(this.name[0] + ' ' + this.name[1] + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+    },
+    greeting: function() {
+      alert('Hi! I\'m ' + this.name[0] + '.');
+    }
+  };
+  console.log(person)
+  person.age = 45;
+  person['name'][1] = 'Cratchit'
+  person['eyes'] = 'hazel';
+  person.like = 'football'
+  person.farewell = function() { alert("Bye everybody!"); }
+  person['eyes']
+  person.farewell
+  let Name = 'weight';
+  let Value = '80kg';
+  person[Name] = Value;
+</script>

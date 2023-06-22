@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22426e3b-7ed8-43a3-b861-2387eed8b571" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mang_12_13/Thuc_hanh_12/thuc_hanh_co_caro.html" beforeDir="false" afterPath="$PROJECT_DIR$/Mang_12_13/Thuc_hanh_12/thuc_hanh_co_caro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mang_12_13/bt_array/BT_13.6/BT_13.6.3.html" beforeDir="false" afterPath="$PROJECT_DIR$/Mang_12_13/bt_array/BT_13.6/BT_13.6.3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mang_12_13/bt_array/bt_13.1/BTVN.html" beforeDir="false" afterPath="$PROJECT_DIR$/Mang_12_13/bt_array/bt_13.1/BTVN.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ham/BT_15/BT_15.5.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ham/BT_15/BT_15.5.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,29 +53,29 @@
       <recent name="C:\Users\tuyen\OneDrive\Desktop\MD1\Ham" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.BT_15.5.html">
-    <configuration name="BT_13.5.8.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BT_11.2_so_nguyen_to.html/Mang_12_13/bt_array/BT_13.5/BT_13.5.8.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="JavaScript Debug.test.html">
     <configuration name="BT_15.3.5.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BT_11.2_so_nguyen_to.html/BT_15/BT_15.3.5.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="BT_15.5.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BT_15.6.html/Ham/BT_15/BT_15.5.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="thuc_hanh_co_caro.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BT_11.2_so_nguyen_to.html/BT11/Mang_12_13/thuc_hanh_co_caro.html" useBuiltInWebServerPort="true">
+    <configuration name="test.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BT_15.6.html/OOP/test.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="vd_array.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BT_11.2_so_nguyen_to.html/vd_array.html" useBuiltInWebServerPort="true">
+    <configuration name="thuc_hanh_canvas.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BT_15.6.html/OOP/thuc_hanh_canvas.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="thuc_hanh_xay_dung_lop_s_circle.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BT_15.6.html/OOP/thuc_hanh_xay_dung_lop_s_circle.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.test.html" />
+        <item itemvalue="JavaScript Debug.thuc_hanh_xay_dung_lop_s_circle.html" />
+        <item itemvalue="JavaScript Debug.thuc_hanh_canvas.html" />
         <item itemvalue="JavaScript Debug.BT_15.5.html" />
         <item itemvalue="JavaScript Debug.BT_15.3.5.html" />
-        <item itemvalue="JavaScript Debug.BT_13.5.8.html" />
-        <item itemvalue="JavaScript Debug.thuc_hanh_co_caro.html" />
-        <item itemvalue="JavaScript Debug.vd_array.html" />
       </list>
     </recent_temporary>
   </component>
@@ -108,7 +105,9 @@
       <workItem from="1687058967648" duration="922000" />
       <workItem from="1687099603133" duration="2514000" />
       <workItem from="1687149673391" duration="16685000" />
-      <workItem from="1687182031706" duration="13787000" />
+      <workItem from="1687182031706" duration="22287000" />
+      <workItem from="1687269010744" duration="48225000" />
+      <workItem from="1687419417377" duration="2584000" />
     </task>
     <servers />
   </component>

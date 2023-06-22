@@ -10,6 +10,10 @@
         background-color: rgb(242, 242, 242);
     }
 
+    table {
+        width: 600px;
+    }
+
     td.nameProduct {
         width: 300px;
         height: 35px;
@@ -17,43 +21,36 @@
     }
 
     td {
-        width: 150px
+        width: 200px
     }
 
-    td.bolder {
-        width: 300px;
-        height: 35px;
-    }
     button {
         background-color: rgb(80, 175, 80);
         color: white;
     }
-
 </style>
 <body onload="displayProduct()">
 <table>
     <tr>
-        <td><h2>Add New Product</h2> </td>
-       <td> <input type="text" id="newProduct" placeholder="New Product">
-        <button onclick="addNewProduct()">Add</button></td>
-    </tr>
-    <tr>
-        <td><h2>Edit Product</h2></td>
+        <td class="nameProduct"><label for="newProduct"><h2>Add New Product</h2></label> </td>
+        <td><input type="text" id="newProduct" placeholder="New Product"></td>
         <td>
-            <input type="text" id="editProduct" placeholder="Edit Product">
-            <button onclick="updateProduct(this)">Update</button>
+            <button onclick="addNewProduct()">Add</button>
+        </td>
+    </tr>
+    <tr style="display: none" id="edit">
+        <td class="nameProduct"><label for="editProduct"><h2>Edit Product</h2></label></td>
+        <td><input type="text" id="editProduct" placeholder="Edit Product"></td>
+        <td>
+            <button onclick="updateProduct()">Update</button>
         </td>
     </tr>
     <tr>
-        <td class="bolder">
-            <h2>Display All Product</h2>
-        </td>
-        <td class="bolder">
-            <button onclick="displayProduct()">Reload</button>
-        </td>
+        <td class="nameProduct"><h2>Display All Product</h2></td>
+        <td></td>
+        <td id="count"></td>
     </tr>
 </table>
-
 <div id="display"></div>
 </body>
 </html>
@@ -63,48 +60,45 @@
 
     function addNewProduct() {
         let input = document.getElementById('newProduct').value
-        arrayProduct.push(input)
-        alert('Đã thêm sảm phẩm ' + input + ' vào danh sách.')
+        if (input !== '') {
+            arrayProduct.push(input)
+            alert('Đã thêm sảm phẩm ' + input + ' vào danh sách.')
+        }
         document.getElementById('newProduct').value = ''
         displayProduct()
     }
 
-    function Delete(element) {
-        for (let i = 0; i < arrayProduct.length; i++) {
-            if (element.id == i) {
-                confirm('Bạn có chắc muốn xóa sản phẩm?')
-                arrayProduct.splice(i, 1)
-            }
-        }
+    function Delete(id) {
+        arrayProduct.splice(id, 1)
         displayProduct()
     }
 
-    function edit(element) {
-        for (let i = 0; i < arrayProduct.length; i++) {
-            if (element.id == i) {
-                document.getElementById('editProduct').value = arrayProduct[i]
-            }
-        }
+    let index;
+
+    function edit(id) {
+        index = id
+        document.getElementById('editProduct').value = arrayProduct[id]
+        document.getElementById('edit').style.display = 'table-row'
     }
-    function updateProduct(element){
+
+    function updateProduct() {
         let update = document.getElementById('editProduct').value
-        for (let i = 0; i < arrayProduct.length; i++) {
-            if (element.id == i) {
-               arrayProduct[i]=update
-            }
+        if (update !== '') {
+            arrayProduct[index] = update
+            alert('Bạn đã sửa sản phầm thành công')
         }
-        alert('Bạn đã sửa sản phầm ' + update )
-        document.getElementById('editProduct').value = ''
+        document.getElementById('edit').style.display = 'none'
         displayProduct()
     }
 
     function displayProduct() {
         data = '<table>'
+        data += '<tr>'+'<td colspan="2"><h3>Product Name</h3></td>'+'<td><b>'+ arrayProduct.length + ' product '+ '</b></td>'+'</tr>'
         for (let i = 0; i < arrayProduct.length; i++) {
             data += '<tr>'
             data += '<td class="nameProduct">' + arrayProduct[i] + '</td>'
-            data += '<td><button onclick="edit(this)" id="' + i + '">Edit</button></td>'
-            data += '<td><button onclick="Delete(this)" id="' + i + '">Delete</button></td>'
+            data += '<td><button onclick="edit(' + i + ')">Edit</button></td>'
+            data += '<td><button onclick="Delete(' + i + ')">Delete</button></td>'
             data += '<tr>'
         }
         data += '</table>'

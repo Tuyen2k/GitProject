@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lớp hình chữ nhật</title>
+</head>
+<body>
+<canvas id="Rectangle" width="1368" height="768" style="border:1px solid #d3d3d3;"></canvas>
+</body>
+</html>
+<script>
+    let Rectangle = function (length, width) {
+        this.length = length
+        this.width = width
+        this.getLength = function () {
+            return length
+        }
+        this.getWidth = function () {
+            return width
+        }
+        this.getAreaRectangle = function () {
+            return this.length * this.width
+        }
+        this.getPerimeterRectangle = function () {
+            return 2 * (this.length + this.width)
+        }
+        this.displayRectangle = function () {
+            var c = document.getElementById("Rectangle");
+            var ctx = c.getContext("2d");
+            ctx.lineWidth = '1'
+            ctx.strokeStyle = "#FF0000";
+            ctx.strokeRect(200, 100, this.length, this.width)
+        }
+    }
+    let rectangle = new Rectangle(100,50)
+    rectangle.length = 300
+    rectangle.width = 150
+    let display = rectangle.displayRectangle()
+    let areaRectangle = rectangle.getAreaRectangle()
+    let perimeterRectangle = rectangle.getPerimeterRectangle()
+    alert('area: '+areaRectangle+ ' ; '+'perimeter: '+perimeterRectangle)
+
+</script>

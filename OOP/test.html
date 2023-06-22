@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function Mobile (id, name){
+        this.id = id
+        this.name = name
+        this.message = ''
+        this.setMessage = function (message){
+            this.message = message
+        }
+        this.getMessage = function (){
+            return this.message
+        }
+        this.sendMessage = function (message, mobile){
+            mobile.setMessage(message)
+        }
+        this.receiveMessage = function (message){
+            alert('Received a message')
+            this.message = message
+        }
+    }
+    var  iphone = new Mobile(1,'Iphone')
+    var  xiaomi = new Mobile(2,'Xiaomi')
+    iphone.sendMessage(prompt('Message send'),xiaomi)
+    console.log(xiaomi.getMessage())
+    xiaomi.receiveMessage(prompt('Message receive'))
+    console.log(xiaomi.getMessage())
+</script>

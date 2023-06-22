@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile</title>
+</head>
+<body>
+<div>
+    Iphone
+    <button onclick="onOff()">On Off</button>
+    <button onclick="status()">Check Status</button>
+    <button onclick="charge()">Charge Battery</button>
+    <button onclick="textMessage(document.getElementById('message').value)">Text Message</button>
+    <button onclick="sendMessage(document.getElementById('mobile').value)">Send Message</button>
+    <button onclick="seenSendMessage()">Seen Send Message</button>
+    <button onclick="seenReceiveMessage()">Seen Receive Message</button>
+</div>
+<br>
+<div>
+    Samsung
+    <button onclick="onOff1()">On Off</button>
+    <button onclick="status1()">Check Status</button>
+    <button onclick="charge1()">Charge Battery</button>
+    <button onclick="textMessage1(document.getElementById('message').value)">Text Message</button>
+    <button onclick="sendMessage1(document.getElementById('mobile').value)">Send Message</button>
+    <button onclick="seenSendMessage1()">Seen Send Message</button>
+    <button onclick="seenReceiveMessage1()">Seen Receive Message</button>
+</div>
+<br>
+<br>
+<input type="text" id="message" placeholder="Write Message">
+<input type="text" id="mobile" placeholder="Mobile Receive">
+</body>
+</html>
+<script>
+    class Mobile {
+        battery
+        status
+        message
+        messageSend
+        messageReceive
+        name
+
+        constructor(name, message, messageSend, messageReceive) {
+            this.battery = 50;
+            this.status = true;
+            this.message = message;
+            this.name = name
+            this.messageSend = messageSend
+            this.messageReceive = messageReceive
+        }
+
+        onOff() {
+            this.status = !this.status
+        }
+
+        checkStatus() {
+            if (this.status) {
+                if (this.battery > 0 && this.battery <= 100) {
+                    alert(this.name + ' đã bật!')
+                }
+            } else alert(this.name + ' đã tắt!')
+        }
+
+        chargeBattery() {
+            alert('The phone is charging.')
+            this.battery = 100
+            alert('The phone is fully charged.')
+        }
+
+        sendMessage(mobile) {
+            if (this.status) {
+                this.battery -= 1
+                this.messageSend = this.messageSend.concat(this.message)
+                mobile.messageReceive = mobile.messageReceive.concat(this.message)
+                this.message = []
+            } else alert('The phone is off')
+        }
+
+        textMessage(string) {
+            if (this.status) {
+                this.battery -= 1
+                this.message.push(string)
+                console.log(this.message)
+            } else alert('The phone is off')
+        }
+
+        seenSendMessage() {
+            console.log(this.name + ' message send: ' + this.messageSend)
+        }
+
+        seenReceiveMessage() {
+            console.log(this.name + ' message receive: ' + this.messageReceive)
+        }
+    }
+
+
+    var iphone = new Mobile('Iphone', [], [], [])
+    var samsung = new Mobile('Samsung', [], [], [])
+
+    function onOff() {
+        iphone.onOff()
+    }
+
+    function status() {
+        iphone.checkStatus()
+    }
+
+    function charge() {
+        iphone.chargeBattery()
+    }
+
+    let name;
+
+    function sendMessage(mobile) {
+        if (mobile === 'samsung') {
+            name = samsung
+        }
+        iphone.sendMessage(name)
+    }
+
+    function textMessage(message) {
+        iphone.textMessage(message)
+    }
+
+    function seenSendMessage() {
+        iphone.seenSendMessage()
+    }
+
+    function seenReceiveMessage() {
+        iphone.seenReceiveMessage()
+    }
+
+    function onOff1() {
+        samsung.onOff()
+    }
+
+    function status1() {
+        samsung.checkStatus()
+    }
+
+    function charge1() {
+        samsung.chargeBattery()
+    }
+
+
+    function sendMessage1(mobile) {
+        if (mobile === 'iphone') {
+            name = iphone
+        }
+        samsung.sendMessage(name)
+    }
+
+    function textMessage1(message) {
+        samsung.textMessage(message)
+    }
+
+    function seenSendMessage1() {
+        samsung.seenSendMessage()
+    }
+
+    function seenReceiveMessage1() {
+        samsung.seenReceiveMessage()
+    }
+
+</script>

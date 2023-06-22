@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class Temperature {
+        valueC
+
+        constructor(valueC) {
+            this.valueC = valueC
+        }
+
+        getValueF() {
+            return (this.valueC * 9 / 5 + 32)
+        }
+
+        getValueK() {
+            return this.valueC + 273.15
+        }
+    }
+
+    let temperature = new Temperature(25)
+    document.write('Nhiệt độ F khi đổi ra là: ' + temperature.getValueF())
+    document.write('<br>')
+    document.write('Nhiệt độ K khi đổi ra là: ' + temperature.getValueK())
+</script>
