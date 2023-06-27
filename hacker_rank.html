@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<!--<script>-->
+<!--Vẽ cầu thang-->
+<!--    // function staircase(n) {-->
+<!--    //     let a = '';-->
+<!--    //     for (i = 1; i <= n; i++) {-->
+<!--    //         for (j = n; j > 0; j&#45;&#45;) {-->
+<!--    //             if (i < j) {-->
+<!--    //                 a += ' '-->
+<!--    //             } else a += '*'-->
+<!--    //         }-->
+<!--    //         console.log(a)-->
+<!--    //         a = ''-->
+<!--    //     }-->
+<!--    //-->
+<!--    // }-->
+<!--    // staircase(6)-->
+<!--</script>-->
+<!--<script>-->
+<!--Đếm số nến-->
+<!--    let m = [3, 2, 1, 6, 4, 6, 4, 6]-->
+<!--    function birthdayCakeCandles(candles) {-->
+<!--        let max = 0-->
+<!--        let count = 0-->
+<!--        for (let i = 0; i < candles.length; i++) {-->
+<!--            if (max < candles[i]) {-->
+<!--                max = candles[i]-->
+<!--            }-->
+<!--        }-->
+<!--        for (let i = 0; i < candles.length; i++) {-->
+<!--            if (max === candles[i]) {-->
+<!--                count++-->
+<!--            }-->
+<!--        }-->
+<!--        console.log(count)-->
+<!--    }-->
+
+<!--    birthdayCakeCandles(m)-->
+<!--</script>-->
+<!--<script>-->
+<!--Đổi giờ -->
+<!--    function timeConversion(s) {-->
+<!--        let b;-->
+<!--        let arr = s.split('')-->
+<!--        console.log(arr)-->
+
+<!--        if (arr[8] === 'P') {-->
+<!--            if (arr[0] === '1' && arr[1] === '2') {-->
+<!--                arr.splice(8, 2)-->
+<!--            } else {-->
+<!--                arr[0] = parseInt(arr[0]) + 1-->
+<!--                arr[1] = parseInt(arr[1]) + 2-->
+<!--                arr.splice(8, 2)-->
+<!--            }-->
+<!--        } else if (arr[0] === '1' && arr[1] === '2') {-->
+<!--            arr[0] = '0'-->
+<!--            arr[1] = '0'-->
+<!--            arr.splice(8, 2)-->
+<!--        } else if (arr[0] !== '1' && arr[1] !== '2') {-->
+<!--            arr.splice(8, 2)-->
+<!--        }-->
+<!--        b = arr.join('')-->
+<!--        console.log(b)-->
+<!--    }-->
+
+<!--    timeConversion('02:34:50PM')-->
+<!--</script>-->
+<!--<script>-->
+<!--    // Tính điểm của học viên-->
+<!--    let arr = [38,48,43,50,55]-->
+<!--    console.log('arr: '+ arr)-->
+<!--    function gradingStudents(grades) {-->
+<!--        for (let i = 0; i < grades.length; i++) {-->
+<!--            if (grades[i] < 38) {-->
+<!--                grades[i] = grades[i]-->
+<!--            } else {-->
+<!--                for (let j = 7; j <= 20; j++) {-->
+<!--                    if (grades[i] >= 5 * j && grades[i] <= 5 * (j + 1)) {-->
+<!--                        if (grades[i] + 3 > 5 * (j + 1)) {-->
+<!--                            grades[i] = 5 * (j + 1)-->
+<!--                        } else {-->
+<!--                            grades[i] = grades[i]-->
+<!--                        }-->
+<!--                    }-->
+<!--                }-->
+<!--            }-->
+<!--        }-->
+<!--        console.log('grades: '+ grades)-->
+<!--    }-->
+
+<!--    gradingStudents(arr)-->
+<!--</script>-->
+<!--<script>-->
+<!--    //Kangaroo jump-->
+<!--    function kangaroo(x1, v1, x2, v2) {-->
+<!--        let result;-->
+<!--        if (v2 >= v1) {-->
+<!--            result = 'NO'-->
+<!--        } else {-->
+<!--            for (let i = 0; x1 + v1 * i <= x2 + v2 * i ; i++) {-->
+<!--                if (x1 + v1 * i === x2 + v2 * i ) {-->
+<!--                    result = 'YES'-->
+<!--                } else {-->
+<!--                    result = 'NO'-->
+<!--                }-->
+<!--            }-->
+<!--        }-->
+<!--        console.log(result)-->
+<!--    }-->
+<!--    kangaroo(43, 5, 49, 3)-->
+<!--</script>-->
+<script>
+    //Tìm ước và bội ở giữa 2 dãy
+    let c = [2]
+    let d = [20, 30, 12]
+    getTotalX(c, d)
+
+    function getTotalX(a, b) {
+        let arrGetTotal = [];
+        a.sort(function (a, b) {
+            return a - b
+        })
+        b.sort(function (a, b) {
+            return a - b
+        })
+
+    }
+</script>

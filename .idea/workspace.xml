@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="22426e3b-7ed8-43a3-b861-2387eed8b571" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ham/BT_15/BT_15.5.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ham/BT_15/BT_15.5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BT11/BT11.4_luyen_tap_2/11.4.3.html" beforeDir="false" afterPath="$PROJECT_DIR$/BT11/BT11.4_luyen_tap_2/11.4.3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BT_BOB.html" beforeDir="false" afterPath="$PROJECT_DIR$/BT_BOB.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ham/BT_15/test_case.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -32,50 +34,54 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/tuyen/OneDrive/Desktop/MD1/case",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tuyen\OneDrive\Desktop\MD1\case" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\tuyen\OneDrive\Desktop\MD1\Ham\BT_15\BT_15.3" />
       <recent name="C:\Users\tuyen\OneDrive\Desktop\MD1\Ham\BT_15" />
       <recent name="C:\Users\tuyen\OneDrive\Desktop\MD1\Ham" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.test.html">
-    <configuration name="BT_15.3.5.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BT_11.2_so_nguyen_to.html/BT_15/BT_15.3.5.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="JavaScript Debug.logIn_case.html">
+    <configuration name="11.4.3.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BT_15.6.html/BT11/BT11.4_luyen_tap_2/11.4.3.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="BT_15.5.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BT_15.6.html/Ham/BT_15/BT_15.5.html" useBuiltInWebServerPort="true">
+    <configuration name="BT_BOB.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BT_15.6.html/BT_BOB.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="test.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BT_15.6.html/OOP/test.html" useBuiltInWebServerPort="true">
+    <configuration name="case- test.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BT_15.6.html/case/case- test.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="thuc_hanh_canvas.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BT_15.6.html/OOP/thuc_hanh_canvas.html" useBuiltInWebServerPort="true">
+    <configuration name="hacker_rank.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BT_15.6.html/hacker_rank.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="thuc_hanh_xay_dung_lop_s_circle.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BT_15.6.html/OOP/thuc_hanh_xay_dung_lop_s_circle.html" useBuiltInWebServerPort="true">
+    <configuration name="logIn_case.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BT_15.6.html/case/logIn_case.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.test.html" />
-        <item itemvalue="JavaScript Debug.thuc_hanh_xay_dung_lop_s_circle.html" />
-        <item itemvalue="JavaScript Debug.thuc_hanh_canvas.html" />
-        <item itemvalue="JavaScript Debug.BT_15.5.html" />
-        <item itemvalue="JavaScript Debug.BT_15.3.5.html" />
+        <item itemvalue="JavaScript Debug.logIn_case.html" />
+        <item itemvalue="JavaScript Debug.case- test.html" />
+        <item itemvalue="JavaScript Debug.hacker_rank.html" />
+        <item itemvalue="JavaScript Debug.BT_BOB.html" />
+        <item itemvalue="JavaScript Debug.11.4.3.html" />
       </list>
     </recent_temporary>
   </component>
@@ -107,7 +113,10 @@
       <workItem from="1687149673391" duration="16685000" />
       <workItem from="1687182031706" duration="22287000" />
       <workItem from="1687269010744" duration="48225000" />
-      <workItem from="1687419417377" duration="2584000" />
+      <workItem from="1687419417377" duration="20112000" />
+      <workItem from="1687614261204" duration="1337000" />
+      <workItem from="1687655047647" duration="7137000" />
+      <workItem from="1687742317950" duration="58512000" />
     </task>
     <servers />
   </component>

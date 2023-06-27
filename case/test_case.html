@@ -13,13 +13,18 @@
         background-color: rgb(66, 133, 244);
         color: white;
     }
+    .img{
+        width: 100px;
+        height: 200px;
+    }
 </style>
-<body onload="displayProduct()">
+<body>
 <div>
     <h1><label for="addNameProduct"> New Product</label></h1>
     <input type="text" id="addNameProduct" placeholder="Name Product">
     <input type="number" id="addPriceProduct" placeholder="Price Product">
     <input type="number" id="addQuantityProduct" placeholder="Quantity Product">
+    <input type="text" id="addQuantityImg" placeholder="Quantity Product">
     <button onclick='addProduct()'>Add</button>
 </div>
 <div id="edit" style="display: none">
@@ -35,55 +40,36 @@
 </html>
 
 <script>
-    class Product {
+    class ProductIp {
         name
         price
         quantity
+        img
 
-        constructor(name, price, quantity) {
+        constructor(name, price, quantity, img) {
             this.name = name
             this.price = price
             this.quantity = quantity
+            this.img = img
         }
 
-        getName() {
-            return this.name
-        }
-
-        getPrice() {
-            return this.price
-        }
-
-        getQuantity() {
-            return this.quantity
-        }
-
-        setName(name) {
-            this.name = name
-        }
-
-        setPrice(price) {
-            this.price = price
-        }
-
-        setQuantity(quantity) {
-            this.quantity = quantity
-        }
     }
 
-    let arrayProduct = [
-        product1 = new Product('Samsung Galaxy', 15000, 100),
-        product2 = new Product('Samsung Galaxy A1', 5000, 20),
-        product3 = new Product('Samsung Galaxy S1', 7000, 50),
-        product4 = new Product('Samsung Galaxy B1', 9000, 13),
-        product5 = new Product('Samsung Galaxy Fold 3', 55000, 22),
-        product6 = new Product('Samsung Galaxy Fill 3', 33000, 34),
-        product7 = new Product('Samsung Galaxy S23 Ultra', 27000, 45),
-        product8 = new Product('Iphone 14', 33000, 50),
-        product9 = new Product('Iphone 14 Pro', 35000, 42),
-        product10 = new Product('Iphone 13 Pro Max', 40000, 11)
-    ]
 
+    let product1 = new ProductIp('Samsung Galaxy', 15000, 100, 'ảnh/iphone14_pro_1.jpg');
+    let product2 = new ProductIp('Samsung Galaxy A1', 5000, 20);
+    let product3 = new ProductIp('Samsung Galaxy S1', 7000, 50);
+    let product4 = new ProductIp('Samsung Galaxy B1', 9000, 13);
+    let product5 = new ProductIp('Samsung Galaxy Fold 3', 55000, 22);
+    let product6 = new ProductIp('Samsung Galaxy Fill 3', 33000, 34);
+    let product7 = new ProductIp('Samsung Galaxy S23 Ultra', 27000, 45);
+    let product8 = new ProductIp('Iphone 14', 33000, 50);
+    let product9 = new ProductIp('Iphone 14 Pro', 35000, 42);
+    let product10 = new ProductIp('Iphone 13 Pro Max', 40000, 11);
+
+    let arrayProductIp = [product1, product2, product3, product4, product5, product6, product7, product8, product9, product10]
+
+    let iLogIn = localStorage.getItem('iLogIn')
     function displayProduct() {
         let data = '<table>'
         data += '<tr>' +
@@ -91,31 +77,37 @@
             '<td><b>' + ' Price' + '</b></td>' +
             '<td><b>' + ' Quantity' + '</b></td>' +
             '<td></td>' +
-            '<td style="color: red"><b>' + arrayProduct.length + ' Products' + '</b></td>' +
+            '<td style="color: red"><b>' + arrayProductIp.length + ' Products' + '</b></td>' +
             '</tr>'
-        for (let i = 0; i < arrayProduct.length; i++) {
+        for (let i = 0; i < arrayProductIp.length; i++) {
             data += '<tr>' +
-                '<td>' + arrayProduct[i].name + '</td>' +
-                '<td>' + arrayProduct[i].price + '</td>' +
-                '<td>' + arrayProduct[i].quantity + '</td>' +
-                '<td><button onclick="editProduct(' + i + ')">Edit</button></td>' +
-                '<td><button onclick="deleteProduct(' + i + ')">Delete</button></td>' +
-                '</tr>'
+                '<td>' + arrayProductIp[i].name + '</td>' +
+                '<td>' + arrayProductIp[i].price + '</td>' +
+                '<td>' + arrayProductIp[i].quantity + '</td>' +
+                '<td>' + `<img class="img" src=${arrayProductIp[i].img}>` + '</td>'
+            if (iLogIn==='true') {
+                data+='<td><button  onclick="editProduct(' + i + ')">Edit</button></td>' +
+                '<td><button  onclick="deleteProduct(' + i + ')">Delete</button></td>'
+            }
+                data+= '</tr>'
         }
         data += '</table>'
         document.getElementById('display').innerHTML = data
+        console.log(iLogIn)
     }
-
+displayProduct()
     function addProduct() {
         let nameProduct = document.getElementById('addNameProduct').value
         let priceProduct = document.getElementById('addPriceProduct').value
         let quantityProduct = document.getElementById('addQuantityProduct').value
-        let input = new Product(nameProduct, priceProduct, quantityProduct)
+        let imgProduct = document.getElementById('addQuantityImg').value
+        let input = new ProductIp(nameProduct, priceProduct, quantityProduct, imgProduct)
         console.log(input)
         if (input.name === '') {
             alert('Please enter product name!')
         } else {
-            arrayProduct.push(input)
+            arrayProductIp.push(input)
+            alert('Success!')
         }
         document.getElementById('addNameProduct').value = ''
         document.getElementById('addPriceProduct').value = ''
@@ -124,7 +116,7 @@
     }
 
     function deleteProduct(id) {
-        arrayProduct.splice(id, 1)
+        arrayProductIp.splice(id, 1)
         displayProduct()
     }
 
@@ -133,9 +125,9 @@
     function editProduct(id) {
         index = id
         document.getElementById('edit').style.display = 'block'
-        document.getElementById('editNameProduct').value = arrayProduct[id].name
-        document.getElementById('editPriceProduct').value = arrayProduct[id].price
-        document.getElementById('editQuantityProduct').value = arrayProduct[id].quantity
+        document.getElementById('editNameProduct').value = arrayProductIp[id].name
+        document.getElementById('editPriceProduct').value = arrayProductIp[id].price
+        document.getElementById('editQuantityProduct').value = arrayProductIp[id].quantity
     }
 
     function updateProduct() {
@@ -145,11 +137,12 @@
         if (updateName === '') {
             alert('Please add product name!')
         } else {
-            arrayProduct[index].name = updateName
-            arrayProduct[index].price = updatePrice
-            arrayProduct[index].quantity = updateQuantity
+            arrayProductIp[index].name = updateName
+            arrayProductIp[index].price = updatePrice
+            arrayProductIp[index].quantity = updateQuantity
         }
         document.getElementById('edit').style.display = 'none'
         displayProduct()
     }
+
 </script>
