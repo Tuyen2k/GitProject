@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="22426e3b-7ed8-43a3-b861-2387eed8b571" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BT11/BT11.4_luyen_tap_2/11.4.3.html" beforeDir="false" afterPath="$PROJECT_DIR$/BT11/BT11.4_luyen_tap_2/11.4.3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BT_BOB.html" beforeDir="false" afterPath="$PROJECT_DIR$/BT_BOB.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ham/BT_15/test_case.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bt_8.6_good_fast_cheat.html" beforeDir="false" afterPath="$PROJECT_DIR$/bt_8.6_good_fast_cheat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/case.html" beforeDir="false" afterPath="$PROJECT_DIR$/case/case.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/case.js" beforeDir="false" afterPath="$PROJECT_DIR$/case/case.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/logIn_case.html" beforeDir="false" afterPath="$PROJECT_DIR$/case/logIn_case.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +19,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -42,6 +44,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/tuyen/OneDrive/Desktop/MD1/case",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -60,13 +63,13 @@
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.logIn_case.html">
-    <configuration name="11.4.3.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BT_15.6.html/BT11/BT11.4_luyen_tap_2/11.4.3.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
     <configuration name="BT_BOB.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BT_15.6.html/BT_BOB.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="case- test.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BT_15.6.html/case/case- test.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="case.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BT_15.6.html/case/case.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="hacker_rank.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BT_15.6.html/hacker_rank.html" useBuiltInWebServerPort="true">
@@ -78,10 +81,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.logIn_case.html" />
+        <item itemvalue="JavaScript Debug.case.html" />
         <item itemvalue="JavaScript Debug.case- test.html" />
         <item itemvalue="JavaScript Debug.hacker_rank.html" />
         <item itemvalue="JavaScript Debug.BT_BOB.html" />
-        <item itemvalue="JavaScript Debug.11.4.3.html" />
       </list>
     </recent_temporary>
   </component>
@@ -116,11 +119,35 @@
       <workItem from="1687419417377" duration="20112000" />
       <workItem from="1687614261204" duration="1337000" />
       <workItem from="1687655047647" duration="7137000" />
-      <workItem from="1687742317950" duration="58512000" />
+      <workItem from="1687742317950" duration="110414000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/case/logIn_case.html</url>
+          <line>590</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/case/logIn_case.html</url>
+          <line>539</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/case/logIn_case.html</url>
+          <line>540</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

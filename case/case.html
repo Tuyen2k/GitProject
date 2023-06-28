@@ -2,160 +2,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Case Study Module 1</title>
+    <link rel="stylesheet" href="case_style.css">
 </head>
-<style>
-    .hLeft {
-        width: 400px;
-        height: 100px;
-        float: left;
-        text-align: center;
-    }
-
-    .hRight {
-        width: 950px;
-        height: 50px;
-        float: left;
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    #menu {
-        float: left;
-    }
-
-    #menu ul li {
-        list-style-type: none;
-        display: inline;
-        margin-left: 50px;
-    }
-
-    .banner {
-        border: 1px solid rgb(0, 72, 61);
-        height: 120px;
-        background-color: rgb(0, 72, 61);
-    }
-
-    #menu {
-        font-family: Helvetica, sans-serif;
-        font-size: 13px;
-        border-radius: 10px;
-        -moz-border-radius: 10px;
-        -webkit-border-radius: 10px;
-    }
-
-    #menu ul li {
-        color: #FFF;
-        text-decoration: none;
-        text-transform: uppercase;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    #menu ul li:visited {
-        color: #FFF;
-        text-decoration: none;
-        text-transform: uppercase;
-    }
-
-    #menu ul li:hover {
-        color: #FFF;
-        background-color: #81B101;
-        -webkit-box-shadow: 0 4px 5px rgba(50, 50, 50, 0.93);
-        -moz-box-shadow: 0 4px 5px rgba(50, 50, 50, 0.93);
-        box-shadow: 0 4px 5px rgba(50, 50, 50, 0.93);
-    }
-
-    article {
-        margin-left: 400px;
-        border-left: 1px solid gray;
-        padding: 1em;
-        overflow: hidden;
-    }
-
-    .img{
-        width: 200px;
-        height: 200px;
-    }
-    .item {
-        margin: 50px;
-        width: 250px;
-        height: 400px;
-        background: #fff;
-        box-shadow: 0 4px 6px #00000029;
-        border-radius: 8px;
-        text-align: center;
-        position: relative;
-    }
-</style>
-<body onload="loadWebpage()">
+<body onload="localStorage.setItem('iLogIn', 'false')">
 <div class="banner">
     <div class="hLeft">
         <h1><img src="logo.jpg" style=" height: 80px; width: 200px"/></h1>
 
     </div>
+
     <div class="hRight">
-        <label><input type="text" placeholder="Hôm nay bạn cần tìm gì?" style="width: 500px; height: 20px"></label>
-        <button>Tìm kiếm</button>
+        <label><input id="search" type="text" placeholder="Hôm nay bạn cần tìm gì?" style="width: 500px; height: 20px"></label>
+        <button onclick="displayProduct(null,document.getElementById('search').value) ">Tìm kiếm</button>
         <button>Đăng ký</button>
         <button onclick="logIn()" id="logIn">Đăng nhập</button>
     </div>
+
     <div id="menu">
         <ul>
             <li onclick="home()">Trang chủ</li>
-            <li onclick="information()"> Giới thiệu</li>
-            <li onclick="displayProduct()">Điện thoại</li>
+            <li onclick="imfomafion()"> Giới thiệu
+            </li>
+            <ul class="formDisplay">
+                <li class="display" id="smartphoneDisplay" onclick="displayProduct(null)">Điện thoại</li>
+                <div class="formDisplay-content">
+                    <a id="iphone" onclick="displayProduct('iphone')">Iphone</a>
+                    <a id="samsung" onclick="displayProduct('samsung')">Samsung</a>
+                </div>
+            </ul>
             <li>Laptop</li>
             <li>Phụ kiện</li>
             <li onclick='addProduct()'>Thêm mới</li>
-            <li>
-
-            </li>
+            <li onclick="displayCart()">Giỏ hàng</li>
         </ul>
     </div>
 </div>
-<div id="formLogIn" style="margin: 0 auto; display: none; position: relative">
-    <div id="myForm" style="border: 1px solid; width: 310px; height: 260px; background-color: white;">
+
+<div id="formLogIn" class="formLogIn">
+    <div class="formLogIn-content">
+        <h1>Đăng nhập</h1>
         <h3>Tài khoản</h3>
         <input type="text" id="nameLogIn" placeholder="Nhập tên đăng nhập" style="width: 300px; height: 20px">
         <h3>Mật khẩu</h3>
         <input type="password" id="passLogIn" placeholder="Nhập mật khẩu đăng nhập" style="width: 300px; height: 20px">
         <br>
         <br>
-        <input type="button" value="Submit" onclick="submit()"
-               style="background-color: rgb(0,103,87); width: 100px; height: 30px; color: white">
-        <input type="reset" value="Reset"
-               style="background-color: rgb(0,103,87); width: 100px; height: 30px; color: white">
-        <input type="button" value="Cancle" onclick="cancle()"
-               style="background-color: rgb(0,103,87); width: 100px; height: 30px; color: white">
+        <input type="button" value="Submit" onclick="submit()" class="logInbtn">
+        <input type="reset" value="Reset" onclick="reset()" class="logInbtn">
+        <input type="button" value="Cancle" class="logInbtn"
+               onclick="document.getElementById('formLogIn').style.display = 'none'">
     </div>
 </div>
 
-<div id="addProduct" style="margin: 0 auto; display: none; position: relative">
-    <fieldset id="formAddProdcut" style="border: 1px solid; background-color: white;" >
+<div id="addProduct" class="addAndEdit">
+    <fieldset id="formAddProdcut">
         <h3>Thêm sản phẩm mới</h3>
         <input type="text" id="nameAdd" placeholder="Tên sản phẩm">
-        <input type="text" id="priceAdd" placeholder="Giá sản phẩm">
-        <input type="text" id="quantityAdd" placeholder="Số lượng sản phẩm">
+        <input type="number" id="priceAdd" placeholder="Giá sản phẩm">
+        <input type="number" id="quantityAdd" placeholder="Số lượng sản phẩm">
         <input type="text" id="imgAdd" placeholder="Link sản phẩm">
         <input type="text" id="typeAdd" placeholder="Hãng sản phẩm">
-        <button style="background-color: rgb(0,103,87); color: white" onclick="addSuccess()">Thêm mới</button>
+        <button class="logInbtn" onclick="addSuccess()">Thêm mới</button>
+        <button class="logInbtn" onclick="document.getElementById('addProduct').style.display = 'none'">Thoát</button>
     </fieldset>
 </div>
 
-<div id="editProduct" style="margin: 0 auto; display: none; position: relative">
-    <fieldset id="formEditProdcut" style="border: 1px solid; background-color: white;" >
+<div id="editProduct" class="addAndEdit">
+    <fieldset id="formEditProdcut">
         <h3>Sửa sản phẩm</h3>
         <input type="text" id="nameEdit" placeholder="Tên sản phẩm">
         <input type="text" id="priceEdit" placeholder="Giá sản phẩm">
         <input type="text" id="quantityEdit" placeholder="Số lượng sản phẩm">
         <input type="text" id="imgEdit" placeholder="Link sản phẩm">
         <input type="text" id="typeEdit" placeholder="Hãng sản phẩm">
-        <button style="background-color: rgb(0,103,87); color: white" onclick="updateProduct()">Cập nhật</button>
+        <button class="logInbtn" onclick="updateProduct()">Cập nhật</button>
+        <button class="logInbtn" onclick="document.getElementById('editProduct').style.display = 'none'">Thoát</button>
     </fieldset>
 </div>
+
+<div id="displayCart" class="displayCart" style="display: none">
+    <h1 style="text-align: center">Giỏ hàng</h1>
+    <div id="displayCart_content" class="displayCart_content">
+    </div>
+    <br>
+    <div>
+        <button class="logInbtn" onclick="document.getElementById('displayCart').style.display = 'none'">Thoát</button>
+    </div>
+</div>
+
+<div id="home">Hello</div>
+
 <article id="introduce" style="display: none">
     <h1 align="center"> Giới thiệu Hoàng Hà Mobile</h1>
 
@@ -236,6 +173,71 @@
 </article>
 
 <div id="display"></div>
+
+<footer>
+    <div class="container">
+        <div class="bg">
+            <div class="col-content">
+                <div>
+                    <h4>Hỗ Trợ - Dịch Vụ</h4>
+                    <ul>
+                        <li>Mua hàng trả góp</li>
+                        <li>Hướng dẫn đặt hàng và thanh toán</li>
+                        <li>Tra cứu đơn hàng</li>
+                        <li>Chính sách bảo hành</li>
+                        <li>Phạm vi, điều khoản gói bảo hành mở rộng</li>
+                        <li>Chính sách bảo mật</li>
+                        <li>Chính sách giải quyết khiếu nại</li>
+                        <li>Điều khoản mua bán hàng hóa</li>
+                        <li>Câu hỏi thường gặp</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Thông tin liên hệ</h4>
+                    <ul>
+                        <li>Bán hàng Online</li>
+                        <li>Chăm sóc khách hàng</li>
+                        <li>Dịch vụ sửa chwuax Hoàng Hà Care</li>
+                        <li>Liên hệ khối văn phòng</li>
+                        <li>Hợp tác kinh doanh</li>
+                        <li>Tra cứu bảo hành</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Tổng đài</h4>
+                    <p>1900.2091</p>
+                </div>
+                <div>
+                    <h4>Thanh toán miễn phí</h4>
+                    <ul class="logo">
+                        <li>
+                            <img src="ảnh/visa.png">
+                            <img src="ảnh/mastercar.jpg">
+                        </li>
+                        <li>
+                            <img src="ảnh/zalopay.jpg">
+                            <img src="ảnh/vnpay.jpg ">
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="logo">
+                        <h4>Hình thức vận chuyêển</h4>
+                        <li>
+                            <img src="ảnh/nhattin.png">
+                            <img src="ảnh/vnpost.jpg ">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <p>© 2020. CÔNG TY CỔ PHẦN XÂY DỰNG VÀ ĐẦU TƯ THƯƠNG MẠI HOÀNG HÀ. MST:  0106713191. (Đăng ký lần đầu: Ngày 15 tháng 12 năm 2014, Đăng ký thay đổi ngày 24/11/2022)</p>
+                <p><strong>GP số 426/GP-TTĐT do sở TTTT Hà Nội cấp ngày 22/01/2021</strong></p>
+                <p><strong>Địa chỉ: Số 89 Đường Tam Trinh, Phường Mai Động, Quận Hoàng Mai, Thành Phố Hà Nội, Việt Nam. Điện thoại: 1900.2091. Chịu trách nhiệm nội dung: </strong></p>
+            </div>
+        </div>
+    </div>
+</footer>
 
 </body>
 <script src="case.js"></script>

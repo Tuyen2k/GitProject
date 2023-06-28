@@ -12,7 +12,7 @@
 </label>
 <label>
     <span>
-         <input type="checkbox" id="fast" class="button"onclick="onswitch('cheap','good')">Fast
+         <input type="checkbox" id="fast" class="button" onclick="onswitch('cheap','good')">Fast
     </span>
 </label>
 <label>
@@ -25,7 +25,9 @@
 <script>
     function onswitch(c,f) {
         var isCheap = document.getElementById(c).checked;
+        console.log(c)
         var isFast = document.getElementById(f).checked;
+        console.log(f)
         if (isCheap && isFast) {
             if (Math.random() < 0.5) {
                 document.getElementById(c).checked = false;
