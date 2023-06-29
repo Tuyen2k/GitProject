@@ -201,6 +201,7 @@ footer {
     margin: auto;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI';
     font-size: 13px;
+    padding-top: 50px;
 }
 .container {
     width: 1200px;
@@ -247,7 +248,19 @@ li {
     text-align: -webkit-match-parent;
 }
 
-img {
+img.logo {
     width: 80px;
     height: 30px;
+}
+img.logoBanner{
+    display: block;
+    height: 600px;
+    margin: auto;
+}
+
+img.bannerGt{
+    display: block;
+    width: 390px;
+    margin: auto;
+    float: left;
 }

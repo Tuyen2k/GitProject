@@ -187,7 +187,7 @@
 
     <div class="hRight">
         <label><input id="search" type="text" placeholder="Hôm nay bạn cần tìm gì?" style="width: 500px; height: 20px"></label>
-        <button onclick="displayProduct(_,document.getElementById('search').value) ">Tìm kiếm</button>
+        <button onclick="displayProduct(null,document.getElementById('search').value) ">Tìm kiếm</button>
         <button>Đăng ký</button>
         <button onclick="logIn()" id="logIn">Đăng nhập</button>
     </div>
@@ -370,7 +370,7 @@
             confirm('Bạn có muốn đăng xuất không?')
             document.getElementById('logIn').innerHTML = 'Đăng nhập'
             localStorage.setItem('iLogIn', 'false');
-            displayProduct()
+            home()
         }
     }
 
@@ -384,7 +384,7 @@
                 document.getElementById('formLogIn').style.display = 'none'
                 localStorage.setItem('iLogIn', 'true')
                 document.getElementById('logIn').innerHTML = 'Đăng xuất'
-                displayProduct()
+                home()
             } else {
                 alert('Vui lòng nhập lại mật khẩu!')
             }
@@ -539,7 +539,7 @@
 
     let localCart = localStorage.getItem('cart')||[]
     let arrayCart = []
-    if (localCart?.length>-0){
+    if (localCart?.length>0){
         arrayCart = JSON.parse(localCart)
     }
 
@@ -623,8 +623,8 @@
             dataCart += '<tr>' +
                 '<td>' + arrayCart[i].name + '</td>' +
                 '<td>' + arrayCart[i].price + '</td>' +
-                '<td>' + '<input type="number" value="' + arrayCart[i].quantity + '" min="0" oninput="quantityCart(this,' + i + ')">' + '</td>' +
-                '<td>' + arrayCart[i].price * arrayCart[i].quantity + '</td>'
+                '<td>' + '<input type="number" value="' + arrayCart[i].quantity + '" min="0" oninput="quantityCart(this,' + i + ')">' + '</td>'+
+                '<td>' + arrayCart[i].price * arrayCart[i].quantity + '</td>' + '<td><button onclick="deleteProductCart()">Xóa</button></td>'
             dataCart += '</tr>'
         }
         dataCart += '<tr style="color: red">' + '<td colspan="3"><b>Tổng thanh toán</b></td>' + '<td id="total"><b>' + total + '</b></td>'
